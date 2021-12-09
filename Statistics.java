@@ -62,7 +62,7 @@ class Statistics {
   // Sorts the array and calculate the median of all values in the array
   private static double calcMedian(Integer[] arr) {
     Arrays.sort(arr);
-    double middleIndex = arr.length / 2;
+    double middleIndex = (arr.length-1) / 2;
     if (middleIndex % 1 == 0) {
       return arr[(int) middleIndex];
     } else {
