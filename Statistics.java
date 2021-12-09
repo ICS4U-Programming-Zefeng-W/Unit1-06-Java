@@ -59,14 +59,15 @@ class Statistics {
     return sum / arr.length;
   }
 
-  // Calculate the median of all values in the array
+  // Sorts the array and calculate the median of all values in the array
   private static double calcMedian(Integer[] arr) {
+    Arrays.sort(arr);
     double middleIndex = arr.length / 2;
     if (middleIndex % 1 == 0) {
       return arr[(int) middleIndex];
     } else {
-      return (double) arr[(int) Math.floor(middleIndex)] 
-                + arr[(int) Math.ceil(middleIndex)] / 2;
+      return ((double) arr[(int) Math.floor(middleIndex)] 
+                + arr[(int) Math.ceil(middleIndex)]) / 2.0;
     }
   }
   
